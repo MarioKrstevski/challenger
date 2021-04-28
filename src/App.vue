@@ -1,22 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view />
+    <!-- <todo-list :tasksProp="initialTasks" /> -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import TodoList from './components/TodoList.vue'
+import initialTasks from './initial-tasks'
+
 
 export default {
   name: 'App',
+  data(){
+    return {
+      initialTasks
+    }
+  },
   components: {
-    HelloWorld
+    // TodoList
   }
 }
 </script>
 
-<style>
+<style lang="scss">
+
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -24,5 +33,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
 }
+
+
 </style>
